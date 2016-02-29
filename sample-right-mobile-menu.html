@@ -1,0 +1,370 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<!-- OPTIONAL FONT -->
+	<link href='http://fonts.googleapis.com/css?family=Lato&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+	<link type="text/css" rel="stylesheet" href="responsive.css">
+	<!-- OVERWRITE CSS -->
+	<link type="text/css" rel="stylesheet" href="style.css">
+</head>
+<body>
+		<header>
+			<div id="menu-button" class="right-side" data-action="right-slide"></div>
+			<div id="logo"><div id="logo-content">RESPONSIVE</div></div>
+			<div id='nav-panel' class='nav-item right'>
+				<ul id="ul-menu" class='nav-menu'>
+				   <li><a href='#'><span>Home</span></a></li>
+				   <li class='active has-sub'><a href='#'><span>Products</span></a>
+					  <ul>
+						 <li class='has-sub'><a href='#'><span>Phones</span></a>
+							<ul>
+							   <li><a href='#'><span>Android Phones</span></a></li>
+							   <li class='last'><a href='#'><span>IOS Phones</span></a></li>
+							</ul>
+						 </li>
+						 <li class='has-sub'><a href='#'><span>Printer</span></a>
+							<ul>
+							   <li><a href='#'><span>Canon</span></a></li>
+							   <li class='last'><a href='#'><span>Pixma</span></a></li>
+							</ul>
+						 </li>
+					  </ul>
+				   </li>
+				   <li><a href='#'><span>News</span></a></li>
+				   <li><a href='#'><span>Media</span></a></li>
+				   <li><a href='#'><span>About</span></a></li>
+				   <li><a href='#'><span>Contact</span></a></li>
+				</ul>
+			</div>
+		</header>
+		<div id="container-inside">
+			<div class="row">
+				<div class="column column-12">
+					<h1>What is Responsive?</h1>
+					<p>Responsive is another open source for creating a quick and simple responsive website design template.</p>
+					<h1>Why responsive design is popular?</h1>
+					<p>This is due to the popularity of mobiles and tablets access on websites, by implementing responsive design approach, it gives the best and optimal viewing of your site. Imagine to view your site directly on your small mobile screen? It will be difficult to read and see. On the other hand, you probably do not want to spend extra cost to build mobile only site to overcome this issue. So why don't just build a full displayed desktop site that is compatible to smaller screen? This is the reason why we approach responsive design web. </p>
+					
+					<h1>Grid content flexibility</h1>
+					<p>One of the idea to have responsive design is the ability to have grid flexibility of your site content. In this particular case, we are going to use twelve columns format. So why 12 columns but not 15 columns or 20 columns. The reason we choose 12 columns because it is easily divided by 2, 3, 4, or 6 columns. If you choose other numbers, you might come up with less column division result.</p>
+					
+					<h1>12 Columns Grid Formula</h1>
+					<p>Below is the simple formula used to calculate the percentage of the 12 columns grid formula. Note: if you want to change the percentage of the left and right padding, you can simple change number value. Below example is done via Javascript. </p>
+					<pre>
+//This is the calculation used to generate the percentage value of column grids.
+var percentageLeftRight   = 5;   // percentage value
+var noOfColumns           = 12;  // no of columns
+for(var i = 1; i <= noOfColumns; i++){
+	var result = ((100 - (((noOfColumns/i)-1) * percentageLeftRight))/noOfColumns) * i;
+	console.log(result);
+}
+					</pre>
+					
+					
+					<h1>So how to use this grid?</h1>
+					<p>To use this grid is simple, you just need to include the following div format. To get the full width of 100% percentage, you will need to add up all columns up to 12 columns.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column column-6">
+<pre>
+&lt;!-- 1 column rule --&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;column column-12&quot;&gt;
+		12 columns content
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- two column rule --&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;column column-6&quot;&gt;
+		6 columns content
+	&lt;/div&gt;
+	&lt;div class=&quot;column column-6&quot;&gt;
+		6 columns content
+	&lt;/div&gt;
+&lt;/div&gt;
+
+&lt;!-- custom columns rule --&gt;
+&lt;div class=&quot;row&quot;&gt;
+	&lt;div class=&quot;column column-4&quot;&gt;
+		4 columns content
+	&lt;/div&gt;
+	&lt;div class=&quot;column column-8&quot;&gt;
+		8 columns content
+	&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+				</div>
+				<div class="column column-6">
+					<div class='demo'>
+						<div class="row">
+							<div class="column column-1">1 col</div>
+							<div class="column column-10">10 col</div>
+							<div class="column column-1">1 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-2">2 col</div>
+							<div class="column column-8">10 col</div>
+							<div class="column column-2">2 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-3">3 col</div>
+							<div class="column column-6">6 col</div>
+							<div class="column column-3">3 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-4">4 col</div>
+							<div class="column column-4">4 col</div>
+							<div class="column column-4">4 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-5">5 col</div>
+							<div class="column column-2">2 col</div>
+							<div class="column column-5">5 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-6">6 col</div>
+							<div class="column column-6">6 col</div>
+						</div>
+						
+						<div class="row">
+							<div class="column column-7">7 col</div>
+							<div class="column column-5">5 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-8">8 col</div>
+							<div class="column column-4">4 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-9">9 col</div>
+							<div class="column column-3">3 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-10">10 col</div>
+							<div class="column column-2">2 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-11">11 col</div>
+							<div class="column column-1">1 col</div>
+						</div>
+						<div class="row">
+							<div class="column column-12">12 col</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div class="row">
+				<div class="column column-6">
+					<p><img src="http://fotoscopy.com/assets/listingimages/39/lrg_48014832_img_7054.jpg"/></p>
+					<div class='center'>Strawberry Fruits - Free stock photo from <a href='http://fotoscopy.com' target='_blank' title='Awesome free images'>http://fotoscopy.com</a></div>
+				</div>
+				<div class="column column-6">
+					<p><img src="http://fotoscopy.com/assets/listingimages/43/lrg_988463517_img_6841.jpg"/></p>
+					<div class='center'>Wild flowers - Free stock photo from <a href='http://fotoscopy.com' target='_blank' title='Free high quality photos'>http://fotoscopy.com</a></div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column column-12">
+					<p>Ameito eupa ut velo loi neci tismaei keumen velpt lorit eua eto mauriz moriol sipoi vuliputu telli convalit dalis uria estelio etui hatibo dulia aiculi egeto nisio nequi in inim orai frinuilo ratrum ticoduy nequex inhac matio ameto acio ina turipi donei donio ultrico curiosue nibhue fringala duiso dictio welz erati tuxi curab pesetaie sceleris feloxi lacui pras gujial sito egetsi ete comodi diami sito augue ultri vezi eua scelerisu congi menai a valio sondue liebeo turipo adipi dea curio sagita tikoan sotpio idu ursiue velio facilisoe menecoi geio pharetu pele dera at risusu haoti scelosqui ameto ruti aeni nequel timoi goi conviluis solicito dignisa telei nune carai iaculo doi sedoi duo ememper ameto mauri buis palti nuni timon muis.</p>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column column-8">
+					<div class="box">
+						<div class="form-row">
+							<label>Name</label>
+							<input type="text" placeholder="Enter name"/>
+						</div>
+						
+						<div class="form-row">
+							<label>Email</label>
+							<input type="text" placeholder="Enter Email"/>
+						</div>
+						
+						<div class="form-row">
+							<label>Email</label>
+							<select id="cboCountry">
+								<option>Select country</option>
+								<option>Country 1</option>
+								<option>Country 2</option>
+								<option>Country 3</option>
+							</select>
+						</div>
+						
+						<div class="form-row">
+							<label>Gender</label>
+							<input type="radio" value="Male"/>Male
+							<input type="radio" value="Female"/>Female
+						</div>
+						
+						<div class="form-row">
+							<label>Comment</label>
+							<textarea placeholder="Enter your comment"></textarea>
+						</div>
+						
+						<div class="form-row">
+							<button class="button">Submit</button>
+						</div>
+					</div>
+				</div>
+				<div class="column column-4">
+					<div class="box">
+						<div class="form-row">
+							<label>Name</label>
+							<input type="text" placeholder="Enter name"/>
+						</div>
+						
+						<div class="form-row">
+							<label>Email</label>
+							<input type="text" placeholder="Enter Email"/>
+						</div>
+						
+						<div class="form-row">
+							<label>Email</label>
+							<select id="cboCountry">
+								<option>Select country</option>
+								<option>Country 1</option>
+								<option>Country 2</option>
+								<option>Country 3</option>
+							</select>
+						</div>
+						
+						<div class="form-row">
+							<label>Gender</label>
+							<input type="radio" value="Male"/>Male
+							<input type="radio" value="Female"/>Female
+						</div>
+						
+						<div class="form-row">
+							<label>Comment</label>
+							<textarea placeholder="Enter your comment"></textarea>
+						</div>
+						
+						<div class="form-row">
+							<button class="button">Submit</button>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="row">
+				<div class="column column-12">
+					<h1>Collection of color buttons</h1>
+					<p>A collection of default color buttons available to use. If you need another color, feel free to grab one of the available color from this <a href='https://bytutorial.com/web-tools/web-button-generator' target='_blank'>Web Button Generator page.</a></p>
+					<p><button class="button">Default Blue</button> <button class="green-button">Green Button</button> <button class="orange-button">Orange Button</button> <button class="red-button">Red Button</button> <button class="dark-button">Dark Button</button></p>
+<pre>
+&lt;button class=&quot;button&quot;&gt;Default Blue&lt;/button&gt; 
+&lt;button class=&quot;green-button&quot;&gt;Green Button&lt;/button&gt; 
+&lt;button class=&quot;orange-button&quot;&gt;Orange Button&lt;/button&gt; 
+&lt;button class=&quot;red-button&quot;&gt;Red Button&lt;/button&gt; 
+&lt;button class=&quot;dark-button&quot;&gt;Dark Button&lt;/button&gt;
+</pre>
+					
+					<h1>Positioning the menu button for mobile</h1>
+					<p>You can positioning the mobile menu either to the left slide or right slide of by default just a simple slide down. The class represents the position of the menu while the data-action represents what type of slide you want to perform.</p>
+					<pre>
+&lt;div id=&quot;menu-button&quot;&gt;&lt;/div&gt;
+
+&lt;div id=&quot;menu-button&quot; class=&quot;left-side&quot; data-action=&quot;left-slide&quot;&gt;&lt;/div&gt;
+
+&lt;div id=&quot;menu-button&quot; class=&quot;right-side&quot; data-action=&quot;right-slide&quot;&gt;&lt;/div&gt;
+					</pre>
+					
+					
+				</div>
+			</div>
+			<div class="row">
+				<div class="column column-12">
+					<h1>Example on how to use responsive</h1>
+					<p>Your first sample responsive template.</p>
+					<pre>
+&lt;!DOCTYPE html&gt;
+&lt;html lang=&quot;en&quot;&gt;
+&lt;head&gt;
+	&lt;meta name=&quot;viewport&quot; content=&quot;width=device-width, initial-scale=1&quot;&gt;
+	&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;responsive.css&quot;&gt;
+	&lt;link type=&quot;text/css&quot; rel=&quot;stylesheet&quot; href=&quot;style.css&quot;&gt;
+&lt;/head&gt;
+&lt;body&gt;
+	&lt;div id=&quot;container&quot;&gt;
+		&lt;header&gt;
+			&lt;div id=&quot;menu-button&quot;&gt;&lt;/div&gt;
+			&lt;div id=&quot;logo&quot;&gt;&lt;div id=&quot;logo-content&quot;&gt;RESPONSIVE&lt;/div&gt;&lt;/div&gt;
+			&lt;div id=&#39;nav-panel&#39; class=&#39;nav-item left&#39;&gt;
+				&lt;ul id=&quot;ul-menu&quot; class=&#39;nav-menu&#39;&gt;
+				   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Home&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+				   &lt;li class=&#39;active has-sub&#39;&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Products&lt;/span&gt;&lt;/a&gt;
+					  &lt;ul&gt;
+						 &lt;li class=&#39;has-sub&#39;&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Phones&lt;/span&gt;&lt;/a&gt;
+							&lt;ul&gt;
+							   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Android Phones&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+							   &lt;li class=&#39;last&#39;&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;IOS Phones&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+						 &lt;/li&gt;
+						 &lt;li class=&#39;has-sub&#39;&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Printer&lt;/span&gt;&lt;/a&gt;
+							&lt;ul&gt;
+							   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Canon&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+							   &lt;li class=&#39;last&#39;&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Pixma&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+							&lt;/ul&gt;
+						 &lt;/li&gt;
+					  &lt;/ul&gt;
+				   &lt;/li&gt;
+				   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;News&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+				   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Media&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+				   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;About&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+				   &lt;li&gt;&lt;a href=&#39;#&#39;&gt;&lt;span&gt;Contact&lt;/span&gt;&lt;/a&gt;&lt;/li&gt;
+				&lt;/ul&gt;
+			&lt;/div&gt;
+		&lt;/header&gt;
+		&lt;div id=&quot;container-inside&quot;&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;column column-4&quot;&gt;
+					Column Left
+				&lt;div class=&quot;column column-4&quot;&gt;
+					Column Mid
+				&lt;/div&gt;
+				&lt;div class=&quot;column column-4&quot;&gt;
+					Column Right
+				&lt;/div&gt;
+			&lt;/div&gt;
+			&lt;div class=&quot;row&quot;&gt;
+				&lt;div class=&quot;column column-12&quot;&gt;
+					Full Column
+				&lt;/div&gt;
+			&lt;/div&gt;
+		&lt;/div&gt;
+	&lt;script src=&quot;https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js&quot;&gt;&lt;/script&gt;
+	&lt;script src=&quot;responsive.js&quot;&gt;&lt;/script&gt;
+	&lt;script type=&quot;text/javascript&quot;&gt;
+		$(function(){
+			$.responsive({});
+		});
+	&lt;/script&gt;
+&lt;/body&gt;
+&lt;/html&gt;
+					
+					</pre>
+					
+					<h1>Overwrite responsive.css file</h1>
+					<p>It is recommended that you do not overwrite the responsive.css file, if there is a newer version available, it will not be overwritten by the latest version. In this example, I overwrite the css by including style.css file.</p>
+					<p>Feel free to post your question or comment if you need further helps.</p>
+				</div>
+			</div>
+		</div>
+		<div id="clear-footer"></div>
+	</div>
+		<footer>
+			<div id="footer-text">Copyright &copy; bytutorial.com - responsive</div>
+		</footer>
+	</div>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+	<script src="responsive.js"></script>
+	<script type="text/javascript">
+		$(function(){
+			$.responsive({});
+		});
+	</script>
+</body>
+</html>
