@@ -64,16 +64,25 @@ This script is purely for handling the mobile menu only, this can be ignored if 
 		
 				$('ul.nav-menu > li.has-child a').on("click", function(event){
 					var currentArrow = $(this).parent().find(" > span");
-					if($(currentArrow).length > 0){
-						if($(currentArrow).attr("class").indexOf("arrow-down") > 0){
-							$(currentArrow).removeClass("arrow-down");
-							$(currentArrow).parent().find(" > ul").slideUp();
-						}else{
-							$(currentArrow).addClass("arrow-down");
-							$(currentArrow).parent().find(" > ul").slideDown();
-						}
-					}
+					setArrowEvent(currentArrow);
 				});
+				
+				$('ul.nav-menu > li.has-child span.arrow').on("click", function(event){
+					var currentArrow = $(this);
+					setArrowEvent(currentArrow);
+				});
+			}
+			
+			function setArrowEvent(currentArrow){
+				if($(currentArrow).length > 0){
+					if($(currentArrow).attr("class").indexOf("arrow-down") > 0){
+						$(currentArrow).removeClass("arrow-down");
+						$(currentArrow).parent().find(" > ul").slideUp();
+					}else{
+						$(currentArrow).addClass("arrow-down");
+						$(currentArrow).parent().find(" > ul").slideDown();
+					}
+				}
 			}
 			
 			setArrowCollapsable();
